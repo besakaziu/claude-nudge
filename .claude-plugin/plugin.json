@@ -1,0 +1,33 @@
+{
+  "name": "nudge",
+  "version": "0.2.0",
+  "description": "When the chat's context fills up, offers to continue in a fresh chat from a handoff note, compact in place, or park the open work for later.",
+  "author": { "name": "besakaziu" },
+  "license": "MIT",
+  "userConfig": {
+    "firstAskAt": {
+      "title": "Ask at (%)",
+      "type": "number",
+      "description": "How full the chat must be (percent of its context window) before the mod first asks what to do.",
+      "default": 70
+    },
+    "step": {
+      "title": "Ask again every (%)",
+      "type": "number",
+      "description": "How many more percentage points to wait before asking again after \"Keep going here\".",
+      "default": 10
+    },
+    "recommend": {
+      "title": "Recommend a choice",
+      "type": "boolean",
+      "description": "Ask a small model (Haiku) for a recommendation each time, from the last few messages. Uses a few thousand tokens per ask.",
+      "default": true
+    },
+    "cacheExpiryAuto": {
+      "title": "Auto-compact on cache expiry",
+      "type": "boolean",
+      "description": "When resuming a chat whose prompt cache has likely expired (idle too long), compact automatically instead of asking first. The dialog that asks also offers \"Always\" and \"Never\", which remember your choice from then on without needing this setting.",
+      "default": false
+    }
+  }
+}
