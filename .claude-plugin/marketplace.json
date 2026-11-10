@@ -1,0 +1,12 @@
+{
+  "name": "claude-nudge",
+  "owner": { "name": "besakaziu" },
+  "description": "A Claude Code mod that offers to continue in a fresh chat, compact, or park the open work for later once a chat's context is filling up.",
+  "plugins": [
+    {
+      "name": "nudge",
+      "source": "./",
+      "description": "Notices when a chat's context is filling up and offers to continue in a fresh chat, compact, or park the open work for later."
+    }
+  ]
+}
